@@ -97,13 +97,17 @@ public class AuthenticationService {
     final var httpRequest = requestFactory.buildRequest(method, genericUrl, content);
     httpRequest.setFollowRedirects(false);
     setTimeout(request, httpRequest);
+
     HttpHeaders headers = new HttpHeaders();
+    headers.setUnknownKeys(request.getHeaders());
 
     if (Constants.BASIC_AUTH_HEADER.equals(authentication.getClientAuthentication())) {
       headers.setBasicAuthentication(
           authentication.getClientId(), authentication.getClientSecret());
     }
     headers.setContentType(Constants.APPLICATION_X_WWW_FORM_URLENCODED);
+
+
     httpRequest.setHeaders(headers);
     return httpRequest;
   }

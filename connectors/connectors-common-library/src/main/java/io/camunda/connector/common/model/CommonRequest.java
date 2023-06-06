@@ -39,7 +39,7 @@ public class CommonRequest {
   @Secret
   private String connectionTimeoutInSeconds;
 
-  @Secret private Map<String, String> headers;
+  @Secret private Map<String, Object> headers;
 
   @Secret private Object body;
 
@@ -61,11 +61,11 @@ public class CommonRequest {
     return body != null;
   }
 
-  public Map<String, String> getHeaders() {
+  public Map<String, Object> getHeaders() {
     return headers;
   }
 
-  public void setHeaders(final Map<String, String> headers) {
+  public void setHeaders(final Map<String, Object> headers) {
     this.headers = headers;
   }
 

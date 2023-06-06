@@ -47,7 +47,7 @@ import org.slf4j.LoggerFactory;
 @OutboundConnector(
     name = "GRAPHQL",
     inputVariables = {"graphql", "authentication"},
-    type = "io.camunda:connector-graphql:1")
+    type = "io.camunda:custom-connector-graphql:1")
 public class GraphQLFunction implements OutboundConnectorFunction {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(GraphQLFunction.class);

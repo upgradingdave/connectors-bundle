@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
-  "name": "GraphQL connector",
+  "name": "Custom GraphQL Connector",
   "id": "io.camunda.connectors.GraphQL.v1",
   "description": "Execute GraphQL query",
   "version": 1,
@@ -47,7 +47,7 @@
   "properties": [
     {
       "type": "Hidden",
-      "value": "io.camunda:connector-graphql:1",
+      "value": "io.camunda:custom-connector-graphql:1",
       "binding": {
         "type": "zeebe:taskDefinition:type"
       }
